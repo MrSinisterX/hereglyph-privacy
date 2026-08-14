@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hereglyph — Privacy</title>
+<meta name="description" content="What Hereglyph collects, who else sees it, and how to take it back.">
+<style>
+  :root {
+    color-scheme: light dark;
+    --ground: #ffffff;
+    --surface: #f6f4f1;
+    --hairline: #e2ddd6;
+    --ink: #1b1a18;
+    --muted: #57534e;
+    --amber: #8a5a12;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ground: #0E1116;
+      --surface: #161B22;
+      --hairline: #2A323D;
+      --ink: #E8E3D9;
+      --muted: #9AA4B2;
+      --amber: #E0A34E;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font: 17px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 68ch; margin: 0 auto; padding: 3rem 1.25rem 6rem; }
+  h1 {
+    font-size: clamp(2rem, 6vw, 2.75rem);
+    line-height: 1.1;
+    margin: 0 0 .5rem;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+  h2 {
+    font-size: 1.3rem;
+    margin: 3rem 0 .75rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--hairline);
+    text-wrap: balance;
+  }
+  h3 { font-size: 1.05rem; margin: 2rem 0 .5rem; }
+  p, li { color: var(--ink); }
+  em { color: var(--muted); font-style: normal; }
+  ul { padding-left: 1.2rem; }
+  li { margin: .4rem 0; }
+  hr { border: 0; border-top: 1px solid var(--hairline); margin: 2.5rem 0; }
+  strong { color: var(--amber); font-weight: 600; }
+  a { color: var(--amber); text-underline-offset: 2px; }
+  code {
+    background: var(--surface);
+    padding: .1em .35em;
+    border-radius: 3px;
+    font-size: .9em;
+  }
+  footer {
+    max-width: 68ch;
+    margin: 0 auto;
+    padding: 0 1.25rem 4rem;
+    color: var(--muted);
+    font-size: .85rem;
+  }
+</style>
+</head>
+<body>
+<main>
+<h1>Hereglyph — Privacy Policy</h1>
+<p><em>Last updated: 14 August 2026</em></p>
+<p>Hereglyph is an app for leaving short messages at physical places, which other</p>
+<p>people can read only by going there. That makes location the centre of how it</p>
+<p>works, so this document is mostly about location.</p>
+<p>It is written to be read rather than to be defensible. If something here is</p>
+<p>unclear, that is a fault worth reporting.</p>
+<hr>
+<h2>What is collected</h2>
+<p><strong>Where you are, when you ask the app to do something.</strong></p>
+<p>Leaving a glyph records the coordinate you left it at — that is the glyph. Both</p>
+<p>the coordinate and the compass direction your phone was facing are stored, and</p>
+<p>both are shown to whoever finds it.</p>
+<p><strong>Where you were when you found something.</strong></p>
+<p>Reading a glyph records the coordinate your device reported at that moment. This</p>
+<p>is kept as a record of where you actually stood, and is used to detect people</p>
+<p>faking their position to read glyphs they never walked to.</p>
+<p><strong>Where you are in the background, if you allow it.</strong></p>
+<p>With background location granted, the app hands your device a list of nearby</p>
+<p>coordinates and asks the operating system to wake it when you cross one. The app</p>
+<p>does not poll, track, or record your location while running in the background.</p>
+<p>It learns only that you crossed one of the circles it was watching for, at the</p>
+<p>moment you crossed it. This is optional, off until you turn it on, and the app</p>
+<p>works without it.</p>
+<p><strong>Your step count, if you allow it.</strong></p>
+<p>Used only to tell walking from driving, so a glyph beside a road does not</p>
+<p>interrupt you at speed. Counts are read for the last ninety seconds and are not</p>
+<p>stored.</p>
+<p><strong>The name you chose, and the email address behind your sign-in.</strong></p>
+<p>Google provides an email address when you sign in. Your chosen handle is shown</p>
+<p>on every glyph you leave.</p>
+<p><strong>What you have left, found and rated.</strong></p>
+<hr>
+<h2>What is not collected</h2>
+<ul>
+<li>No advertising identifiers, and no advertising.</li>
+<li>No continuous location history. There is no record of where you have been,</li>
+</ul>
+<p>  only of the specific glyphs you left or found.</p>
+<ul>
+<li>No contacts, photos, microphone, or camera.</li>
+<li>No analytics or crash-reporting service; nothing about your behaviour is sent</li>
+</ul>
+<p>  to a third party.</p>
+<ul>
+<li>Nothing is sold, and nothing is shared with advertisers or data brokers.</li>
+</ul>
+<hr>
+<h2>Who else sees it</h2>
+<p><strong>Other users</strong> see: your handle, the glyphs you leave, where you left them,</p>
+<p>and which way you were facing. They do not see your email address, where you</p>
+<p>have been, or anything you have found or rated.</p>
+<p><strong>Supabase</strong> hosts the database and handles sign-in. They process the data on</p>
+<p>Hereglyph's behalf and do not use it for their own purposes.</p>
+<p><strong>Google</strong> provides sign-in. They know you signed into Hereglyph, as they do</p>
+<p>for any app you use their account with.</p>
+<p><strong>Map tiles</strong> come from OpenFreeMap, which serves OpenStreetMap data. Requesting</p>
+<p>map tiles tells their servers the rough area you are looking at, as with any map.</p>
+<p>Data may be disclosed if legally required. Nothing else.</p>
+<hr>
+<h2>How long it lasts</h2>
+<p>Glyphs fade. An unfound one lasts a day; being found and being liked extend it.</p>
+<p>A faded glyph stops being shown but is kept in the database, so statistics about</p>
+<p>places survive the messages themselves.</p>
+<p>Discovery records are kept while your account exists.</p>
+<p><strong>When you delete your account, all of it goes</strong> — your handle, your email, the</p>
+<p>glyphs you left, and everything you found and rated. Glyphs you left stop</p>
+<p>existing at the places they were left. This is immediate and cannot be undone.</p>
+<p>It is done in Settings, without contacting anyone.</p>
+<hr>
+<h2>What you can do</h2>
+<ul>
+<li><strong>Download everything held about you</strong>, as a file, from Settings.</li>
+<li><strong>Delete your account and all of it</strong>, from Settings.</li>
+<li><strong>Block someone</strong>, from any glyph of theirs you find. You will not be shown</li>
+</ul>
+<p>  anything of theirs again, and your phone will not wake for their glyphs.</p>
+<ul>
+<li><strong>Report a glyph</strong>, from the glyph itself.</li>
+<li><strong>Withdraw any permission</strong> at any time, in Settings or in Android's settings.</li>
+</ul>
+<p>  Revoking background location stops background discovery; nothing else breaks.</p>
+<p>If you are in the UK or EU, the rights above are how the GDPR rights of access,</p>
+<p>erasure and portability are exercised — directly, without asking anyone.</p>
+<hr>
+<h2>Children</h2>
+<p>Hereglyph is not intended for children under 13, and is not directed at</p>
+<p>children. It is not enrolled in the Play Families programme.</p>
+<hr>
+<h2>Security</h2>
+<p>Everything travels over HTTPS. The database enforces per-row access rules, so</p>
+<p>one account cannot read another's data even if the app is modified: the rules</p>
+<p>live on the server, not in the app. A glyph's content is never sent to a device</p>
+<p>that has not proven it reached the location.</p>
+<p>No system is perfect. If you find a way to read something you should not be able</p>
+<p>to, please report it to the address below.</p>
+<hr>
+<h2>Changes</h2>
+<p>Material changes will be announced in the app before taking effect, not</p>
+<p>backdated into this page.</p>
+<hr>
+<h2>Contact</h2>
+<p>Questions, corrections, or a report that something here is wrong:</p>
+<p><strong>https://github.com/MrSinisterX/hereglyph-privacy/issues</strong></p>
+<p>A public issue tracker rather than an email address, deliberately: it is</p>
+<p>monitored, it does not put a personal address into a document that search</p>
+<p>engines will index, and a privacy complaint answered in the open is answered</p>
+<p>for everybody who had the same question.</p>
+<p>If you would rather not raise it publicly, say so in an issue with no detail and</p>
+<p>a private channel will be arranged.</p>
+</main>
+<footer>Hereglyph · generated from store/PRIVACY.md</footer>
+</body>
+</html>
