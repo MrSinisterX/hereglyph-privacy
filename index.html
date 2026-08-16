@@ -75,7 +75,7 @@
 <body>
 <main>
 <h1>Hereglyph — Privacy Policy</h1>
-<p><em>Last updated: 14 August 2026</em></p>
+<p><em>Last updated: 16 August 2026</em></p>
 <p>Hereglyph is an app for leaving short messages at physical places, which other</p>
 <p>people can read only by going there. That makes location the centre of how it</p>
 <p>works, so this document is mostly about location.</p>
@@ -105,7 +105,18 @@
 <p><strong>The name you chose, and the email address behind your sign-in.</strong></p>
 <p>Google provides an email address when you sign in. Your chosen handle is shown</p>
 <p>on every glyph you leave.</p>
-<p><strong>What you have left, found and rated.</strong></p>
+<p><strong>What you have left, found and rated.</strong> Including answers you add to somebody</p>
+<p>else's glyph, which carry your handle and are visible to anyone who finds it.</p>
+<p><strong>A notification address for your phone, if you allow notifications.</strong></p>
+<p>Android issues an identifier for this app on this device, and it is stored so</p>
+<p>the app can tell you that someone read your glyph, or that there is something</p>
+<p>near you. It identifies the installation, not you, and it is deleted when you</p>
+<p>turn notifications off, when Android retires it, and with your account.</p>
+<p><strong>A description of the app breaking, if it breaks.</strong></p>
+<p>A crash records what the app was doing, the error, the app version, and the</p>
+<p>Android version. It does not record where you were: a crash report has no</p>
+<p>business carrying a position. It goes to Hereglyph's own database — no</p>
+<p>third-party crash-reporting service is used.</p>
 <hr>
 <h2>What is not collected</h2>
 <ul>
@@ -115,21 +126,26 @@
 <p>  only of the specific glyphs you left or found.</p>
 <ul>
 <li>No contacts, photos, microphone, or camera.</li>
-<li>No analytics or crash-reporting service; nothing about your behaviour is sent</li>
+<li>No analytics, and no third-party crash-reporting or tracking service. Nothing</li>
 </ul>
-<p>  to a third party.</p>
+<p>  about your behaviour is sent to anyone else. Crashes are recorded, and they</p>
+<p>  are recorded here.</p>
 <ul>
 <li>Nothing is sold, and nothing is shared with advertisers or data brokers.</li>
 </ul>
 <hr>
 <h2>Who else sees it</h2>
 <p><strong>Other users</strong> see: your handle, the glyphs you leave, where you left them,</p>
-<p>and which way you were facing. They do not see your email address, where you</p>
-<p>have been, or anything you have found or rated.</p>
+<p>which way you were facing, and any answer you add to somebody else's glyph.</p>
+<p>They do not see your email address, where you have been, or anything you have</p>
+<p>found or rated.</p>
 <p><strong>Supabase</strong> hosts the database and handles sign-in. They process the data on</p>
 <p>Hereglyph's behalf and do not use it for their own purposes.</p>
 <p><strong>Google</strong> provides sign-in. They know you signed into Hereglyph, as they do</p>
-<p>for any app you use their account with.</p>
+<p>for any app you use their account with. Google also carries notifications to</p>
+<p>your phone, through Firebase Cloud Messaging: they see that a message was sent</p>
+<p>to your device, and its contents, which is one line naming a glyph. They do not</p>
+<p>receive your location.</p>
 <p><strong>Map tiles</strong> come from OpenFreeMap, which serves OpenStreetMap data. Requesting</p>
 <p>map tiles tells their servers the rough area you are looking at, as with any map.</p>
 <p>Data may be disclosed if legally required. Nothing else.</p>
@@ -139,6 +155,8 @@
 <p>A faded glyph stops being shown but is kept in the database, so statistics about</p>
 <p>places survive the messages themselves.</p>
 <p>Discovery records are kept while your account exists.</p>
+<p>Crash reports are kept for thirty days and then deleted. The notification</p>
+<p>address for your phone is kept while notifications are on.</p>
 <p><strong>When you delete your account, all of it goes</strong> — your handle, your email, the</p>
 <p>glyphs you left, and everything you found and rated. Glyphs you left stop</p>
 <p>existing at the places they were left. This is immediate and cannot be undone.</p>
