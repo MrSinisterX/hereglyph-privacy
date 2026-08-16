@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hereglyph — something is here</title>
+
+<!-- What a shared link looks like when it is pasted into a chat. This is most
+     of why sharing works at all: the preview has to say what the thing is
+     before anybody decides to tap it. -->
+<meta property="og:title" content="Someone left something here">
+<meta property="og:description" content="A message pinned to one spot. Nobody can read it until they walk within 20 metres of it.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0E1116">
+
+<style>
+  :root {
+    color-scheme: light dark;
+    --ground: #ffffff;
+    --surface: #f6f4f1;
+    --hairline: #e2ddd6;
+    --ink: #1b1a18;
+    --muted: #57534e;
+    --amber: #8a5a12;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ground: #0E1116;
+      --surface: #161B22;
+      --hairline: #2A323D;
+      --ink: #E8E3D9;
+      --muted: #9AA4B2;
+      --amber: #E0A34E;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: Georgia, 'Times New Roman', serif;
+  }
+
+  main { max-width: 30rem; text-align: center; }
+
+  .mark {
+    width: 84px;
+    height: 84px;
+    margin: 0 auto 28px;
+    border-radius: 50%;
+    border: 1px solid var(--hairline);
+    display: grid;
+    place-items: center;
+    background: var(--surface);
+  }
+
+  .mark svg { width: 38px; height: 38px; stroke: var(--muted); fill: none; stroke-width: 1.6; }
+
+  h1 { font-size: 1.7rem; line-height: 1.25; margin: 0 0 12px; font-weight: 600; }
+
+  p { color: var(--muted); line-height: 1.65; margin: 0 0 28px; }
+
+  .rule { width: 56px; height: 1px; background: var(--hairline); margin: 0 auto 28px; }
+
+  a.button {
+    display: block;
+    padding: 15px 20px;
+    border-radius: 4px;
+    background: var(--amber);
+    color: var(--ground);
+    font-family: system-ui, sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  a.quiet {
+    display: inline-block;
+    margin-top: 18px;
+    color: var(--muted);
+    font-family: system-ui, sans-serif;
+    font-size: .9rem;
+  }
+
+  footer { margin-top: 34px; font-family: system-ui, sans-serif; font-size: .8rem; color: var(--muted); }
+  footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <div class="mark" aria-hidden="true">
+    <svg viewBox="0 0 24 24"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
+  </div>
+
+  <h1>Someone left something here</h1>
+
+  <div class="rule"></div>
+
+  <p>
+    A message pinned to one spot on earth. Nobody can read it — not the person who
+    shared this, not us — until you are standing within twenty metres of it.
+  </p>
+
+  <a class="button" id="open" href="#">Open in Hereglyph</a>
+  <a class="quiet" id="store" href="#">Don’t have it? Get Hereglyph</a>
+
+  <footer>
+    <a href="../">Privacy</a>
+  </footer>
+</main>
+
+<script>
+  /*
+   * Two audiences on one link, and no way to tell them apart in advance.
+   *
+   * Somebody with the app should land in it; somebody without should land
+   * somewhere that explains what they are being invited to. Deciding on the
+   * server is impossible — this is a static page — and sniffing the user agent
+   * guesses wrong constantly.
+   *
+   * So the page just says both, and the deep link is a real link rather than an
+   * automatic redirect. An immediate jump is worse than it sounds: on a phone
+   * without the app it produces an error page, and in an in-app browser it can
+   * be blocked outright, leaving a blank screen and no explanation of what was
+   * being offered.
+   */
+  var PLAY = 'https://play.google.com/store/apps/details?id=com.hereglyph.app';
+  var id = new URLSearchParams(location.search).get('g') || '';
+
+  var open = document.getElementById('open');
+  open.href = id ? 'hereglyph://glyph/' + encodeURIComponent(id) : 'hereglyph://';
+
+  document.getElementById('store').href = PLAY;
+</script>
+</body>
+</html>
