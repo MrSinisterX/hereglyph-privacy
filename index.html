@@ -52,8 +52,11 @@
   h3 { font-size: 1.05rem; margin: 2rem 0 .5rem; }
   p, li { color: var(--ink); }
   em { color: var(--muted); font-style: normal; }
-  ul { padding-left: 1.2rem; }
-  li { margin: .4rem 0; }
+  ul, ol { padding-left: 1.4rem; }
+  li { margin: .5rem 0; }
+  /* The deletion steps are the reason someone opened the page. */
+  ol li { padding-left: .2rem; }
+  ol li::marker { color: var(--amber); font-weight: 600; }
   hr { border: 0; border-top: 1px solid var(--hairline); margin: 2.5rem 0; }
   strong { color: var(--amber); font-weight: 600; }
   a { color: var(--amber); text-underline-offset: 2px; }
@@ -76,132 +79,66 @@
 <main>
 <h1>Hereglyph — Privacy Policy</h1>
 <p><em>Last updated: 16 August 2026</em></p>
-<p>Hereglyph is an app for leaving short messages at physical places, which other</p>
-<p>people can read only by going there. That makes location the centre of how it</p>
-<p>works, so this document is mostly about location.</p>
-<p>It is written to be read rather than to be defensible. If something here is</p>
-<p>unclear, that is a fault worth reporting.</p>
+<p>Hereglyph is an app for leaving short messages at physical places, which other people can read only by going there. That makes location the centre of how it works, so this document is mostly about location.</p>
+<p>It is written to be read rather than to be defensible. If something here is unclear, that is a fault worth reporting.</p>
 <hr>
 <h2>What is collected</h2>
-<p><strong>Where you are, when you ask the app to do something.</strong></p>
-<p>Leaving a glyph records the coordinate you left it at — that is the glyph. Both</p>
-<p>the coordinate and the compass direction your phone was facing are stored, and</p>
-<p>both are shown to whoever finds it.</p>
-<p><strong>Where you were when you found something.</strong></p>
-<p>Reading a glyph records the coordinate your device reported at that moment. This</p>
-<p>is kept as a record of where you actually stood, and is used to detect people</p>
-<p>faking their position to read glyphs they never walked to.</p>
-<p><strong>Where you are in the background, if you allow it.</strong></p>
-<p>With background location granted, the app hands your device a list of nearby</p>
-<p>coordinates and asks the operating system to wake it when you cross one. The app</p>
-<p>does not poll, track, or record your location while running in the background.</p>
-<p>It learns only that you crossed one of the circles it was watching for, at the</p>
-<p>moment you crossed it. This is optional, off until you turn it on, and the app</p>
-<p>works without it.</p>
-<p><strong>Your step count, if you allow it.</strong></p>
-<p>Used only to tell walking from driving, so a glyph beside a road does not</p>
-<p>interrupt you at speed. Counts are read for the last ninety seconds and are not</p>
-<p>stored.</p>
-<p><strong>The name you chose, and the email address behind your sign-in.</strong></p>
-<p>Google provides an email address when you sign in. Your chosen handle is shown</p>
-<p>on every glyph you leave.</p>
-<p><strong>What you have left, found and rated.</strong> Including answers you add to somebody</p>
-<p>else's glyph, which carry your handle and are visible to anyone who finds it.</p>
-<p><strong>A notification address for your phone, if you allow notifications.</strong></p>
-<p>Android issues an identifier for this app on this device, and it is stored so</p>
-<p>the app can tell you that someone read your glyph, or that there is something</p>
-<p>near you. It identifies the installation, not you, and it is deleted when you</p>
-<p>turn notifications off, when Android retires it, and with your account.</p>
-<p><strong>A description of the app breaking, if it breaks.</strong></p>
-<p>A crash records what the app was doing, the error, the app version, and the</p>
-<p>Android version. It does not record where you were: a crash report has no</p>
-<p>business carrying a position. It goes to Hereglyph's own database — no</p>
-<p>third-party crash-reporting service is used.</p>
+<p><strong>Where you are, when you ask the app to do something.</strong> Leaving a glyph records the coordinate you left it at — that is the glyph. Both the coordinate and the compass direction your phone was facing are stored, and both are shown to whoever finds it.</p>
+<p><strong>Where you were when you found something.</strong> Reading a glyph records the coordinate your device reported at that moment. This is kept as a record of where you actually stood, and is used to detect people faking their position to read glyphs they never walked to.</p>
+<p><strong>Where you are in the background, if you allow it.</strong> With background location granted, the app hands your device a list of nearby coordinates and asks the operating system to wake it when you cross one. The app does not poll, track, or record your location while running in the background. It learns only that you crossed one of the circles it was watching for, at the moment you crossed it. This is optional, off until you turn it on, and the app works without it.</p>
+<p><strong>Your step count, if you allow it.</strong> Used only to tell walking from driving, so a glyph beside a road does not interrupt you at speed. Counts are read for the last ninety seconds and are not stored.</p>
+<p><strong>The name you chose, and the email address behind your sign-in.</strong> Google provides an email address when you sign in. Your chosen handle is shown on every glyph you leave.</p>
+<p><strong>What you have left, found and rated.</strong> Including answers you add to somebody else's glyph, which carry your handle and are visible to anyone who finds it.</p>
+<p><strong>A notification address for your phone, if you allow notifications.</strong> Android issues an identifier for this app on this device, and it is stored so the app can tell you that someone read your glyph, or that there is something near you. It identifies the installation, not you, and it is deleted when you turn notifications off, when Android retires it, and with your account.</p>
+<p><strong>A description of the app breaking, if it breaks.</strong> A crash records what the app was doing, the error, the app version, and the Android version. It does not record where you were: a crash report has no business carrying a position. It goes to Hereglyph's own database — no third-party crash-reporting service is used.</p>
 <hr>
 <h2>What is not collected</h2>
 <ul>
 <li>No advertising identifiers, and no advertising.</li>
-<li>No continuous location history. There is no record of where you have been,</li>
-</ul>
-<p>  only of the specific glyphs you left or found.</p>
-<ul>
+<li>No continuous location history. There is no record of where you have been, only of the specific glyphs you left or found.</li>
 <li>No contacts, photos, microphone, or camera.</li>
-<li>No analytics, and no third-party crash-reporting or tracking service. Nothing</li>
-</ul>
-<p>  about your behaviour is sent to anyone else. Crashes are recorded, and they</p>
-<p>  are recorded here.</p>
-<ul>
+<li>No analytics, and no third-party crash-reporting or tracking service. Nothing about your behaviour is sent to anyone else. Crashes are recorded, and they are recorded here.</li>
 <li>Nothing is sold, and nothing is shared with advertisers or data brokers.</li>
 </ul>
 <hr>
 <h2>Who else sees it</h2>
-<p><strong>Other users</strong> see: your handle, the glyphs you leave, where you left them,</p>
-<p>which way you were facing, and any answer you add to somebody else's glyph.</p>
-<p>They do not see your email address, where you have been, or anything you have</p>
-<p>found or rated.</p>
-<p><strong>Supabase</strong> hosts the database and handles sign-in. They process the data on</p>
-<p>Hereglyph's behalf and do not use it for their own purposes.</p>
-<p><strong>Google</strong> provides sign-in. They know you signed into Hereglyph, as they do</p>
-<p>for any app you use their account with. Google also carries notifications to</p>
-<p>your phone, through Firebase Cloud Messaging: they see that a message was sent</p>
-<p>to your device, and its contents, which is one line naming a glyph. They do not</p>
-<p>receive your location.</p>
-<p><strong>Map tiles</strong> come from OpenFreeMap, which serves OpenStreetMap data. Requesting</p>
-<p>map tiles tells their servers the rough area you are looking at, as with any map.</p>
+<p><strong>Other users</strong> see: your handle, the glyphs you leave, where you left them, which way you were facing, and any answer you add to somebody else's glyph. They do not see your email address, where you have been, or anything you have found or rated.</p>
+<p><strong>Supabase</strong> hosts the database and handles sign-in. They process the data on Hereglyph's behalf and do not use it for their own purposes.</p>
+<p><strong>Google</strong> provides sign-in. They know you signed into Hereglyph, as they do for any app you use their account with. Google also carries notifications to your phone, through Firebase Cloud Messaging: they see that a message was sent to your device, and its contents, which is one line naming a glyph. They do not receive your location.</p>
+<p><strong>Map tiles</strong> come from OpenFreeMap, which serves OpenStreetMap data. Requesting map tiles tells their servers the rough area you are looking at, as with any map.</p>
 <p>Data may be disclosed if legally required. Nothing else.</p>
 <hr>
 <h2>How long it lasts</h2>
-<p>Glyphs fade. An unfound one lasts a day; being found and being liked extend it.</p>
-<p>A faded glyph stops being shown but is kept in the database, so statistics about</p>
-<p>places survive the messages themselves.</p>
+<p>Glyphs fade. An unfound one lasts a day; being found and being liked extend it. A faded glyph stops being shown but is kept in the database, so statistics about places survive the messages themselves.</p>
 <p>Discovery records are kept while your account exists.</p>
-<p>Crash reports are kept for thirty days and then deleted. The notification</p>
-<p>address for your phone is kept while notifications are on.</p>
-<p><strong>When you delete your account, all of it goes</strong> — your handle, your email, the</p>
-<p>glyphs you left, and everything you found and rated. Glyphs you left stop</p>
-<p>existing at the places they were left. This is immediate and cannot be undone.</p>
-<p>It is done in Settings, without contacting anyone.</p>
+<p>Crash reports are kept for thirty days and then deleted. The notification address for your phone is kept while notifications are on.</p>
+<p><strong>When you delete your account, all of it goes</strong> — your handle, your email, the glyphs you left, and everything you found and rated. Glyphs you left stop existing at the places they were left. This is immediate and cannot be undone. It is done in Settings, without contacting anyone.</p>
 <hr>
 <h2>What you can do</h2>
 <ul>
 <li><strong>Download everything held about you</strong>, as a file, from Settings.</li>
 <li><strong>Delete your account and all of it</strong>, from Settings.</li>
-<li><strong>Block someone</strong>, from any glyph of theirs you find. You will not be shown</li>
-</ul>
-<p>  anything of theirs again, and your phone will not wake for their glyphs.</p>
-<ul>
+<li><strong>Block someone</strong>, from any glyph of theirs you find. You will not be shown anything of theirs again, and your phone will not wake for their glyphs.</li>
 <li><strong>Report a glyph</strong>, from the glyph itself.</li>
-<li><strong>Withdraw any permission</strong> at any time, in Settings or in Android's settings.</li>
+<li><strong>Withdraw any permission</strong> at any time, in Settings or in Android's settings. Revoking background location stops background discovery; nothing else breaks.</li>
 </ul>
-<p>  Revoking background location stops background discovery; nothing else breaks.</p>
-<p>If you are in the UK or EU, the rights above are how the GDPR rights of access,</p>
-<p>erasure and portability are exercised — directly, without asking anyone.</p>
+<p>If you are in the UK or EU, the rights above are how the GDPR rights of access, erasure and portability are exercised — directly, without asking anyone.</p>
 <hr>
 <h2>Children</h2>
-<p>Hereglyph is not intended for children under 13, and is not directed at</p>
-<p>children. It is not enrolled in the Play Families programme.</p>
+<p>Hereglyph is not intended for children under 13, and is not directed at children. It is not enrolled in the Play Families programme.</p>
 <hr>
 <h2>Security</h2>
-<p>Everything travels over HTTPS. The database enforces per-row access rules, so</p>
-<p>one account cannot read another's data even if the app is modified: the rules</p>
-<p>live on the server, not in the app. A glyph's content is never sent to a device</p>
-<p>that has not proven it reached the location.</p>
-<p>No system is perfect. If you find a way to read something you should not be able</p>
-<p>to, please report it to the address below.</p>
+<p>Everything travels over HTTPS. The database enforces per-row access rules, so one account cannot read another's data even if the app is modified: the rules live on the server, not in the app. A glyph's content is never sent to a device that has not proven it reached the location.</p>
+<p>No system is perfect. If you find a way to read something you should not be able to, please report it to the address below.</p>
 <hr>
 <h2>Changes</h2>
-<p>Material changes will be announced in the app before taking effect, not</p>
-<p>backdated into this page.</p>
+<p>Material changes will be announced in the app before taking effect, not backdated into this page.</p>
 <hr>
 <h2>Contact</h2>
 <p>Questions, corrections, or a report that something here is wrong:</p>
 <p><strong>https://github.com/MrSinisterX/hereglyph-privacy/issues</strong></p>
-<p>A public issue tracker rather than an email address, deliberately: it is</p>
-<p>monitored, it does not put a personal address into a document that search</p>
-<p>engines will index, and a privacy complaint answered in the open is answered</p>
-<p>for everybody who had the same question.</p>
-<p>If you would rather not raise it publicly, say so in an issue with no detail and</p>
-<p>a private channel will be arranged.</p>
+<p>A public issue tracker rather than an email address, deliberately: it is monitored, it does not put a personal address into a document that search engines will index, and a privacy complaint answered in the open is answered for everybody who had the same question.</p>
+<p>If you would rather not raise it publicly, say so in an issue with no detail and a private channel will be arranged.</p>
 </main>
 <footer>Hereglyph · generated from store/PRIVACY.md</footer>
 </body>
