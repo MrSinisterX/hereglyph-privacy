@@ -52,8 +52,11 @@
   h3 { font-size: 1.05rem; margin: 2rem 0 .5rem; }
   p, li { color: var(--ink); }
   em { color: var(--muted); font-style: normal; }
-  ul { padding-left: 1.2rem; }
-  li { margin: .4rem 0; }
+  ul, ol { padding-left: 1.4rem; }
+  li { margin: .5rem 0; }
+  /* The deletion steps are the reason someone opened the page. */
+  ol li { padding-left: .2rem; }
+  ol li::marker { color: var(--amber); font-weight: 600; }
   hr { border: 0; border-top: 1px solid var(--hairline); margin: 2.5rem 0; }
   strong { color: var(--amber); font-weight: 600; }
   a { color: var(--amber); text-underline-offset: 2px; }
@@ -76,40 +79,28 @@
 <main>
 <h1>Deleting your Hereglyph account</h1>
 <p><em>Last updated: 17 August 2026</em></p>
-<p>Hereglyph is the app for leaving short messages at places, readable only by</p>
-<p>walking to them. This page is the one Google Play links to, and it says exactly</p>
-<p>how to delete your account and what happens to everything attached to it.</p>
-<p>You do not have to email anyone or wait for a reply. It is two taps in the app,</p>
-<p>and it happens the moment you confirm.</p>
+<p>Hereglyph is the app for leaving short messages at places, readable only by walking to them. This page is the one Google Play links to, and it says exactly how to delete your account and what happens to everything attached to it.</p>
+<p>You do not have to email anyone or wait for a reply. You do it yourself, in the app, and it happens the moment you confirm.</p>
 <hr>
 <h2>How to delete your account</h2>
-<p>1. Open <strong>Hereglyph</strong>.</p>
-<p>2. Tap the <strong>gear icon</strong>, top right, to open Settings.</p>
-<p>3. Scroll to <strong>Your data</strong>.</p>
-<p>4. Tap <strong>Delete</strong> beside <em>Delete your account</em>.</p>
-<p>5. Type <strong>DELETE</strong> in the box to confirm, then tap <strong>Delete for ever</strong>.</p>
+<ol>
+<li>Open <strong>Hereglyph</strong>.</li>
+<li>Tap the <strong>gear icon</strong>, top right, to open Settings.</li>
+<li>Scroll to <strong>Your data</strong>.</li>
+<li>Tap <strong>Delete</strong> beside <em>Delete your account</em>.</li>
+<li>Type <strong>DELETE</strong> in the box to confirm, then tap <strong>Delete for ever</strong>.</li>
+</ol>
 <p>That is the whole process. It is immediate and it cannot be undone.</p>
-<p><strong>If you have already uninstalled the app</strong>, reinstall it and sign in with the</p>
-<p>same Google account — everything is still attached to it, and the five steps</p>
-<p>above still work. If you cannot sign in for any reason, open an issue at</p>
-<p><a href="https://github.com/MrSinisterX/hereglyph-privacy/issues">github.com/MrSinisterX/hereglyph-privacy/issues</a></p>
-<p>saying you want your account deleted and the handle you used. Requests are</p>
-<p>answered within 30 days.</p>
+<p><strong>If you have already uninstalled the app</strong>, reinstall it and sign in with the same Google account — everything is still attached to it, and the five steps above still work. If you cannot sign in for any reason, open an issue at <a href="https://github.com/MrSinisterX/hereglyph-privacy/issues">github.com/MrSinisterX/hereglyph-privacy/issues</a> saying you want your account deleted and the handle you used. Requests are answered within 30 days.</p>
 <hr>
 <h2>What is deleted</h2>
 <p>All of it, immediately:</p>
 <ul>
 <li><strong>Your account and sign-in.</strong> The link between you and your Google account.</li>
 <li><strong>Your name.</strong> The handle you chose, freed for somebody else to take.</li>
-<li><strong>Every glyph you left.</strong> They stop existing at the places you left them.</li>
-</ul>
-<p>  People who already read one keep what they read; nothing new can find it.</p>
-<ul>
+<li><strong>Every glyph you left.</strong> They stop existing at the places you left them. People who already read one keep what they read; nothing new can find it.</li>
 <li><strong>Every answer you added</strong> to someone else's glyph.</li>
-<li><strong>Everything you found.</strong> The record of which glyphs you read, and where you</li>
-</ul>
-<p>  were standing when you read them.</p>
-<ul>
+<li><strong>Everything you found.</strong> The record of which glyphs you read, and where you were standing when you read them.</li>
 <li><strong>Every rating you gave.</strong></li>
 <li><strong>Every report you made, and everyone you blocked.</strong></li>
 <li><strong>Your notification address</strong>, so your phone stops being sent anything.</li>
@@ -117,28 +108,16 @@
 <hr>
 <h2>What is kept, and for how long</h2>
 <ul>
-<li><strong>Crash reports</strong> made by your copy of the app are kept for <strong>30 days</strong> and</li>
+<li><strong>Crash reports</strong> made by your copy of the app are kept for <strong>30 days</strong> and are then deleted automatically. When your account goes, the link between a crash report and you is severed immediately: what remains is a fault and a version number, with nothing identifying in it.</li>
+<li><strong>Counts.</strong> Anonymous totals — how many glyphs exist in a city, how often a word gets used — survive, because they are numbers about places rather than about people. Nothing in them can be traced back to you.</li>
 </ul>
-<p>  are then deleted automatically. When your account goes, the link between a</p>
-<p>  crash report and you is severed immediately: what remains is a fault and a</p>
-<p>  version number, with nothing identifying in it.</p>
-<ul>
-<li><strong>Counts.</strong> Anonymous totals — how many glyphs exist in a city, how often a</li>
-</ul>
-<p>  word gets used — survive, because they are numbers about places rather than</p>
-<p>  about people. Nothing in them can be traced back to you.</p>
-<p>Nothing else is retained. There is no backup copy kept aside, and no</p>
-<p>"deactivated" state you can be restored from.</p>
+<p>Nothing else is retained. There is no backup copy kept aside, and no "deactivated" state you can be restored from.</p>
 <hr>
 <h2>Deleting some of it instead</h2>
-<p>If you want to erase what you have written and found but keep your account and</p>
-<p>your name, there is a separate page for that:</p>
-<p><a href="delete-data.html">Deleting your data</a>.</p>
+<p>If you want to erase what you have written and found but keep your account and your name, there is a separate page for that: <a href="delete-data.html">Deleting your data</a>.</p>
 <hr>
 <h2>Taking a copy first</h2>
-<p>Deletion is permanent, so if you want what you leave behind: **Settings → Your</p>
-<p>data → Export**. It hands you a file with everything the app holds about you.</p>
-<p>Do this before step 4, not after.</p>
+<p>Deletion is permanent, so if you want what you leave behind: <strong>Settings → Your data → Export</strong>. It hands you a file with everything the app holds about you. Do this before step 4, not after.</p>
 <hr>
 <h2>Questions</h2>
 <p><a href="https://github.com/MrSinisterX/hereglyph-privacy/issues">github.com/MrSinisterX/hereglyph-privacy/issues</a></p>
